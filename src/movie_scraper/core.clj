@@ -83,7 +83,7 @@
          next-url (get-next-url start-url)
          new-total (+ num-total movie-count)]
      (println movie-count "movies found from" start-url ". Total: " new-total)
-     (if (nil? next-url)
+     (if (= 0 (count movie-urls))
        (println "Scraping done.")
        (do
          (spit last-scrape-file start-url)

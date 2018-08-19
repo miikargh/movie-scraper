@@ -70,7 +70,7 @@
         fname (title->file title)
         path (str dir fname)]
     (io/make-parents path)
-    (spit path (str title "\n\n" desc))))
+    (spit path (str title "\n\n" desc "\n"))))
 
 
 (defn scrape-movies
